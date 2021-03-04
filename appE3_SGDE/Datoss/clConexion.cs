@@ -13,11 +13,13 @@ namespace appE3_SGDE.Datoss
     {
         MySqlConnection objConexion = null;
 
+        //Recordar para cada prueba de ejecucion, digitar la contraseña correspondiente a su base de datos
+
         public clConexion()
         {
             try
             {
-                objConexion = new MySqlConnection("server=localhost; user id=root;Port=3306;database=domiciliosbd;Password=gimnacia");
+                objConexion = new MySqlConnection("server=localhost; user id=root;Port=3306;database=domiciliosbd;Password=");
             }
             catch (Exception error)
             {
@@ -25,7 +27,7 @@ namespace appE3_SGDE.Datoss
                 throw;
             }
 
-
+           
 
 
 

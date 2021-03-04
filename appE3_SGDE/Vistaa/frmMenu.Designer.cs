@@ -54,6 +54,7 @@ namespace appE3_SGDE.Vistaa
             this.listarPedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tarifasPorSectoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tarifasPersonalizadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mapaDeCostosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -152,7 +153,8 @@ namespace appE3_SGDE.Vistaa
             // 
             this.costosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tarifasPorSectoresToolStripMenuItem,
-            this.tarifasPersonalizadasToolStripMenuItem});
+            this.tarifasPersonalizadasToolStripMenuItem,
+            this.mapaDeCostosToolStripMenuItem});
             this.costosToolStripMenuItem.Name = "costosToolStripMenuItem";
             this.costosToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.costosToolStripMenuItem.Text = "Costos";
@@ -241,6 +243,12 @@ namespace appE3_SGDE.Vistaa
             this.tarifasPersonalizadasToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.tarifasPersonalizadasToolStripMenuItem.Text = "Tarifas personalizadas ";
             // 
+            // mapaDeCostosToolStripMenuItem
+            // 
+            this.mapaDeCostosToolStripMenuItem.Name = "mapaDeCostosToolStripMenuItem";
+            this.mapaDeCostosToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.mapaDeCostosToolStripMenuItem.Text = "Mapa de costos";
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,5 +293,6 @@ namespace appE3_SGDE.Vistaa
         private System.Windows.Forms.ToolStripMenuItem listarPedidosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tarifasPorSectoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tarifasPersonalizadasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mapaDeCostosToolStripMenuItem;
     }
 }

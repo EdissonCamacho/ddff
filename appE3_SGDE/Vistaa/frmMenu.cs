@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using appE3_SGDE.Vistaa;
 
 namespace appE3_SGDE.Vistaa
 {
@@ -17,6 +18,10 @@ namespace appE3_SGDE.Vistaa
             InitializeComponent();
         }
 
-      
+        private void listarClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListarClientes objListarClientes = new frmListarClientes();
+            objListarClientes.Show();
+        }
     }
 }

@@ -29,6 +29,7 @@ namespace appE3_SGDE.Vistaa
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.empresasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDeEmpresasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -150,20 +151,20 @@ namespace appE3_SGDE.Vistaa
             // listarClientesToolStripMenuItem
             // 
             this.listarClientesToolStripMenuItem.Name = "listarClientesToolStripMenuItem";
-            this.listarClientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listarClientesToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.listarClientesToolStripMenuItem.Text = "Listar clientes";
             this.listarClientesToolStripMenuItem.Click += new System.EventHandler(this.listarClientesToolStripMenuItem_Click);
             // 
             // registrarClientesToolStripMenuItem
             // 
             this.registrarClientesToolStripMenuItem.Name = "registrarClientesToolStripMenuItem";
-            this.registrarClientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registrarClientesToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.registrarClientesToolStripMenuItem.Text = "Registrar clientes";
             // 
             // editarClientesToolStripMenuItem
             // 
             this.editarClientesToolStripMenuItem.Name = "editarClientesToolStripMenuItem";
-            this.editarClientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editarClientesToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.editarClientesToolStripMenuItem.Text = "Editar clientes";
             // 
             // sociosToolStripMenuItem
@@ -254,12 +255,16 @@ namespace appE3_SGDE.Vistaa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -23,5 +23,11 @@ namespace appE3_SGDE.Vistaa
             frmListarClientes objListarClientes = new frmListarClientes();
             objListarClientes.Show();
         }
+
+        private void listaDeEmpresasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListarEmpresa objListarEmpresa = new frmListarEmpresa();
+            objListarEmpresa.Show();
+        }
     }
 }

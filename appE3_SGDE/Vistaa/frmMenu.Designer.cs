@@ -91,6 +91,7 @@ namespace appE3_SGDE.Vistaa
             this.listaDeEmpresasToolStripMenuItem.Name = "listaDeEmpresasToolStripMenuItem";
             this.listaDeEmpresasToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.listaDeEmpresasToolStripMenuItem.Text = "Lista de empresas";
+            this.listaDeEmpresasToolStripMenuItem.Click += new System.EventHandler(this.listaDeEmpresasToolStripMenuItem_Click);
             // 
             // registrarEmpresasToolStripMenuItem
             // 
@@ -151,20 +152,20 @@ namespace appE3_SGDE.Vistaa
             // listarClientesToolStripMenuItem
             // 
             this.listarClientesToolStripMenuItem.Name = "listarClientesToolStripMenuItem";
-            this.listarClientesToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.listarClientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listarClientesToolStripMenuItem.Text = "Listar clientes";
             this.listarClientesToolStripMenuItem.Click += new System.EventHandler(this.listarClientesToolStripMenuItem_Click);
             // 
             // registrarClientesToolStripMenuItem
             // 
             this.registrarClientesToolStripMenuItem.Name = "registrarClientesToolStripMenuItem";
-            this.registrarClientesToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.registrarClientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.registrarClientesToolStripMenuItem.Text = "Registrar clientes";
             // 
             // editarClientesToolStripMenuItem
             // 
             this.editarClientesToolStripMenuItem.Name = "editarClientesToolStripMenuItem";
-            this.editarClientesToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.editarClientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editarClientesToolStripMenuItem.Text = "Editar clientes";
             // 
             // sociosToolStripMenuItem
@@ -236,19 +237,19 @@ namespace appE3_SGDE.Vistaa
             // tarifasPorSectoresToolStripMenuItem
             // 
             this.tarifasPorSectoresToolStripMenuItem.Name = "tarifasPorSectoresToolStripMenuItem";
-            this.tarifasPorSectoresToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.tarifasPorSectoresToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.tarifasPorSectoresToolStripMenuItem.Text = "Tarifas por sectores";
             // 
             // tarifasPersonalizadasToolStripMenuItem
             // 
             this.tarifasPersonalizadasToolStripMenuItem.Name = "tarifasPersonalizadasToolStripMenuItem";
-            this.tarifasPersonalizadasToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.tarifasPersonalizadasToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.tarifasPersonalizadasToolStripMenuItem.Text = "Tarifas personalizadas ";
             // 
             // mapaDeCostosToolStripMenuItem
             // 
             this.mapaDeCostosToolStripMenuItem.Name = "mapaDeCostosToolStripMenuItem";
-            this.mapaDeCostosToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.mapaDeCostosToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.mapaDeCostosToolStripMenuItem.Text = "Mapa de costos";
             // 
             // frmMenu

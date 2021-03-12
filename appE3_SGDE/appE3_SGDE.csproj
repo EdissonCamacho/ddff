@@ -33,12 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data, Version=8.0.23.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,11 +59,11 @@
     <Compile Include="Datoss\clRelacion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vistaa\frmListarEmpresa.cs">
+    <Compile Include="Vistaa\frmEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistaa\frmListarEmpresa.Designer.cs">
-      <DependentUpon>frmListarEmpresa.cs</DependentUpon>
+    <Compile Include="Vistaa\frmEmpresa.Designer.cs">
+      <DependentUpon>frmEmpresa.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistaa\frmLogin.cs">
       <SubType>Form</SubType>
@@ -74,11 +77,11 @@
     <Compile Include="Vistaa\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistaa\frmListarClientes.cs">
+    <Compile Include="Vistaa\frmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistaa\frmListarClientes.Designer.cs">
-      <DependentUpon>frmListarClientes.cs</DependentUpon>
+    <Compile Include="Vistaa\frmClientes.Designer.cs">
+      <DependentUpon>frmClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistaa\frmRelacion.cs">
       <SubType>Form</SubType>
@@ -96,11 +99,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Vistaa\frmListarClientes.resx">
-      <DependentUpon>frmListarClientes.cs</DependentUpon>
+    <EmbeddedResource Include="Vistaa\frmClientes.resx">
+      <DependentUpon>frmClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistaa\frmListarEmpresa.resx">
-      <DependentUpon>frmListarEmpresa.cs</DependentUpon>
+    <EmbeddedResource Include="Vistaa\frmEmpresa.resx">
+      <DependentUpon>frmEmpresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistaa\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

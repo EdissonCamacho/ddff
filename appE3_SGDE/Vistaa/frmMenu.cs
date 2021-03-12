@@ -20,14 +20,47 @@ namespace appE3_SGDE.Vistaa
 
         private void listarClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmListarClientes objListarClientes = new frmListarClientes();
+            frmClientes objListarClientes = new frmClientes();
             objListarClientes.Show();
         }
 
         private void listaDeEmpresasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmListarEmpresa objListarEmpresa = new frmListarEmpresa();
+            frmEmpresa objListarEmpresa = new frmEmpresa();
             objListarEmpresa.Show();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void mtdAbrirFormHijo(object formhijo)
+        {
+            if (this.PanelContenedor.Controls.Count>0)
+                this.PanelContenedor.Controls.RemoveAt(0);
+            Form fh = formhijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.PanelContenedor.Controls.Add(fh);
+            this.PanelContenedor.Tag = fh;
+            fh.Show();
+
+        }
+
+        private void btnEmpresa_Click(object sender, EventArgs e)
+        {
+            mtdAbrirFormHijo(new frmEmpresa());
+        }
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            mtdAbrirFormHijo(new frmClientes());
         }
     }
 }

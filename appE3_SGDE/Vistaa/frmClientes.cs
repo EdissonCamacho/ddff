@@ -11,9 +11,9 @@ using appE3_SGDE.Datoss;
 
 namespace appE3_SGDE.Vistaa
 {
-    public partial class frmListarClientes : Form
+    public partial class frmClientes : Form
     {
-        public frmListarClientes()
+        public frmClientes()
         {
             InitializeComponent();
         }

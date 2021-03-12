@@ -11,10 +11,10 @@ using appE3_SGDE.Datoss;
 
 namespace appE3_SGDE.Vistaa
 {
-    public partial class frmListarEmpresa : Form
+    public partial class frmEmpresa : Form
     {
 
-        public frmListarEmpresa()
+        public frmEmpresa()
         {
             InitializeComponent();
         }

@@ -1,7 +1,7 @@
 ﻿
 namespace appE3_SGDE.Vistaa
 {
-    partial class frmListarClientes
+    partial class frmClientes
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@ namespace appE3_SGDE.Vistaa
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListarClientes));
             this.dgvListarClientes = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,11 +38,14 @@ namespace appE3_SGDE.Vistaa
             // 
             // dgvListarClientes
             // 
-            this.dgvListarClientes.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvListarClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvListarClientes.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgvListarClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListarClientes.Location = new System.Drawing.Point(103, 103);
+            this.dgvListarClientes.Location = new System.Drawing.Point(162, 91);
             this.dgvListarClientes.Name = "dgvListarClientes";
-            this.dgvListarClientes.Size = new System.Drawing.Size(565, 297);
+            this.dgvListarClientes.Size = new System.Drawing.Size(808, 145);
             this.dgvListarClientes.TabIndex = 1;
             // 
             // label1
@@ -64,24 +66,28 @@ namespace appE3_SGDE.Vistaa
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(338, 59);
+            this.label3.Location = new System.Drawing.Point(527, 60);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "LISTA CLIENTES";
             // 
-            // frmListarClientes
+            // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ClientSize = new System.Drawing.Size(1146, 733);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvListarClientes);
-            this.Name = "frmListarClientes";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "frmClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listar_clientes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

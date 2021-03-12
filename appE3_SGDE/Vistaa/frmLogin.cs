@@ -27,10 +27,9 @@ namespace appE3_SGDE.Vistaa
         {
             if (txtUsuario.Text=="Administrador" & txtContraseña.Text=="sgde2021")
             {
+                this.Hide();
                 frmMenu objMenu = new frmMenu();
                 objMenu.Show();
-                frmLogin objLogin = new frmLogin();
-                this.Hide();
                 MessageBox.Show("!Bienvenido¡", "Sesión iniciada correctamente",MessageBoxButtons.OK);
             }
             else
@@ -41,6 +40,55 @@ namespace appE3_SGDE.Vistaa
                 }
                 MessageBox.Show("Datos invalidos", "Error al iniciar", MessageBoxButtons.OK);
             }
+        }
+
+        private void txtUsuario_Enter(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text == "USUARIO")
+            {
+                txtUsuario.Text = "";
+                txtUsuario.ForeColor = Color.LightGray;
+            }
+
+        }
+
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text=="")
+            {
+                txtUsuario.Text = "USUARIO";
+                txtUsuario.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void txtContraseña_Enter(object sender, EventArgs e)
+        {
+            if (txtContraseña.Text == "CONTRASEÑA")
+            {
+                txtContraseña.Text = "";
+                txtContraseña.ForeColor = Color.LightGray;
+                txtContraseña.UseSystemPasswordChar =true;
+            }
+        }
+
+        private void txtContraseña_Leave(object sender, EventArgs e)
+        {
+            if (txtContraseña.Text == "")
+            {
+                txtContraseña.Text = "CONTRASEÑA";
+                txtContraseña.ForeColor = Color.DimGray;
+                txtContraseña.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void btnCerrar_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

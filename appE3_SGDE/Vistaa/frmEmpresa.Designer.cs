@@ -1,6 +1,6 @@
 ﻿namespace appE3_SGDE.Vistaa
 {
-    partial class frmListarEmpresa
+    partial class frmEmpresa
     {
         /// <summary>
         /// Required designer variable.
@@ -36,6 +36,9 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(331, 30);
@@ -46,6 +49,9 @@
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.SteelBlue;
             this.button1.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(354, 72);
@@ -57,23 +63,26 @@
             // 
             // dgvListarEmpresa
             // 
-            this.dgvListarEmpresa.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvListarEmpresa.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvListarEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListarEmpresa.Location = new System.Drawing.Point(177, 111);
             this.dgvListarEmpresa.Name = "dgvListarEmpresa";
             this.dgvListarEmpresa.Size = new System.Drawing.Size(457, 199);
             this.dgvListarEmpresa.TabIndex = 2;
             // 
-            // frmListarEmpresa
+            // frmEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::appE3_SGDE.Properties.Resources.WhatsApp_Image_2021_03_09_at_8_22_41_AM;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dgvListarEmpresa);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Name = "frmListarEmpresa";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "frmEmpresa";
             this.Text = "frmListarEmpresa";
             this.Load += new System.EventHandler(this.frmListarEmpresa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListarEmpresa)).EndInit();

@@ -31,6 +31,7 @@ namespace appE3_SGDE.Vistaa
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.MenuVertical = new System.Windows.Forms.Panel();
@@ -49,24 +50,23 @@ namespace appE3_SGDE.Vistaa
             this.btnCliente = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEmpresa = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnHome = new System.Windows.Forms.PictureBox();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape8 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape7 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape6 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PanelContenedor = new System.Windows.Forms.Panel();
-            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape6 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape7 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape8 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.label1 = new System.Windows.Forms.Label();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             this.SuspendLayout();
             // 
             // BarraTitulo
@@ -80,6 +80,17 @@ namespace appE3_SGDE.Vistaa
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(1366, 35);
             this.BarraTitulo.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(3, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(191, 22);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "SGDE-ADSI 2142457";
             // 
             // btnMinimizar
             // 
@@ -123,7 +134,7 @@ namespace appE3_SGDE.Vistaa
             this.MenuVertical.Controls.Add(this.btnCliente);
             this.MenuVertical.Controls.Add(this.panel1);
             this.MenuVertical.Controls.Add(this.btnEmpresa);
-            this.MenuVertical.Controls.Add(this.pictureBox1);
+            this.MenuVertical.Controls.Add(this.btnHome);
             this.MenuVertical.Controls.Add(this.shapeContainer1);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 35);
@@ -135,7 +146,7 @@ namespace appE3_SGDE.Vistaa
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(32, 593);
+            this.pictureBox2.Location = new System.Drawing.Point(32, 601);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(140, 117);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -154,6 +165,7 @@ namespace appE3_SGDE.Vistaa
             // btnCostos
             // 
             this.btnCostos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCostos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCostos.FlatAppearance.BorderSize = 0;
             this.btnCostos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnCostos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -180,6 +192,7 @@ namespace appE3_SGDE.Vistaa
             // btnpedidos
             // 
             this.btnpedidos.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnpedidos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnpedidos.FlatAppearance.BorderSize = 0;
             this.btnpedidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnpedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -206,6 +219,7 @@ namespace appE3_SGDE.Vistaa
             // btnLlamada
             // 
             this.btnLlamada.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnLlamada.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLlamada.FlatAppearance.BorderSize = 0;
             this.btnLlamada.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnLlamada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -232,6 +246,7 @@ namespace appE3_SGDE.Vistaa
             // btnSocios
             // 
             this.btnSocios.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnSocios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSocios.FlatAppearance.BorderSize = 0;
             this.btnSocios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnSocios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -258,6 +273,7 @@ namespace appE3_SGDE.Vistaa
             // btnProducto
             // 
             this.btnProducto.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnProducto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProducto.FlatAppearance.BorderSize = 0;
             this.btnProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -284,6 +300,7 @@ namespace appE3_SGDE.Vistaa
             // btnCliente
             // 
             this.btnCliente.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCliente.FlatAppearance.BorderSize = 0;
             this.btnCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -309,6 +326,7 @@ namespace appE3_SGDE.Vistaa
             // 
             // btnEmpresa
             // 
+            this.btnEmpresa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEmpresa.FlatAppearance.BorderSize = 0;
             this.btnEmpresa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -324,15 +342,18 @@ namespace appE3_SGDE.Vistaa
             this.btnEmpresa.UseVisualStyleBackColor = true;
             this.btnEmpresa.Click += new System.EventHandler(this.btnEmpresa_Click);
             // 
-            // pictureBox1
+            // btnHome
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(39, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 132);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.Location = new System.Drawing.Point(39, 6);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(140, 132);
+            this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnHome.TabIndex = 0;
+            this.btnHome.TabStop = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // shapeContainer1
             // 
@@ -351,6 +372,66 @@ namespace appE3_SGDE.Vistaa
             this.shapeContainer1.Size = new System.Drawing.Size(220, 733);
             this.shapeContainer1.TabIndex = 1;
             this.shapeContainer1.TabStop = false;
+            // 
+            // lineShape8
+            // 
+            this.lineShape8.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape8.Enabled = false;
+            this.lineShape8.Name = "lineShape8";
+            this.lineShape8.X1 = 18;
+            this.lineShape8.X2 = 198;
+            this.lineShape8.Y1 = 214;
+            this.lineShape8.Y2 = 214;
+            // 
+            // lineShape7
+            // 
+            this.lineShape7.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape7.Enabled = false;
+            this.lineShape7.Name = "lineShape7";
+            this.lineShape7.X1 = 18;
+            this.lineShape7.X2 = 199;
+            this.lineShape7.Y1 = 277;
+            this.lineShape7.Y2 = 277;
+            // 
+            // lineShape6
+            // 
+            this.lineShape6.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape6.Enabled = false;
+            this.lineShape6.Name = "lineShape6";
+            this.lineShape6.X1 = 19;
+            this.lineShape6.X2 = 198;
+            this.lineShape6.Y1 = 343;
+            this.lineShape6.Y2 = 343;
+            // 
+            // lineShape5
+            // 
+            this.lineShape5.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape5.Enabled = false;
+            this.lineShape5.Name = "lineShape5";
+            this.lineShape5.X1 = 19;
+            this.lineShape5.X2 = 197;
+            this.lineShape5.Y1 = 405;
+            this.lineShape5.Y2 = 405;
+            // 
+            // lineShape4
+            // 
+            this.lineShape4.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape4.Enabled = false;
+            this.lineShape4.Name = "lineShape4";
+            this.lineShape4.X1 = 19;
+            this.lineShape4.X2 = 198;
+            this.lineShape4.Y1 = 467;
+            this.lineShape4.Y2 = 467;
+            // 
+            // lineShape3
+            // 
+            this.lineShape3.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape3.Enabled = false;
+            this.lineShape3.Name = "lineShape3";
+            this.lineShape3.X1 = 17;
+            this.lineShape3.X2 = 200;
+            this.lineShape3.Y1 = 533;
+            this.lineShape3.Y2 = 533;
             // 
             // lineShape2
             // 
@@ -382,77 +463,6 @@ namespace appE3_SGDE.Vistaa
             this.PanelContenedor.Size = new System.Drawing.Size(1146, 733);
             this.PanelContenedor.TabIndex = 2;
             // 
-            // lineShape3
-            // 
-            this.lineShape3.BorderColor = System.Drawing.Color.DimGray;
-            this.lineShape3.Enabled = false;
-            this.lineShape3.Name = "lineShape3";
-            this.lineShape3.X1 = 17;
-            this.lineShape3.X2 = 200;
-            this.lineShape3.Y1 = 533;
-            this.lineShape3.Y2 = 533;
-            // 
-            // lineShape4
-            // 
-            this.lineShape4.BorderColor = System.Drawing.Color.DimGray;
-            this.lineShape4.Enabled = false;
-            this.lineShape4.Name = "lineShape4";
-            this.lineShape4.X1 = 19;
-            this.lineShape4.X2 = 198;
-            this.lineShape4.Y1 = 467;
-            this.lineShape4.Y2 = 467;
-            // 
-            // lineShape5
-            // 
-            this.lineShape5.BorderColor = System.Drawing.Color.DimGray;
-            this.lineShape5.Enabled = false;
-            this.lineShape5.Name = "lineShape5";
-            this.lineShape5.X1 = 19;
-            this.lineShape5.X2 = 197;
-            this.lineShape5.Y1 = 405;
-            this.lineShape5.Y2 = 405;
-            // 
-            // lineShape6
-            // 
-            this.lineShape6.BorderColor = System.Drawing.Color.DimGray;
-            this.lineShape6.Enabled = false;
-            this.lineShape6.Name = "lineShape6";
-            this.lineShape6.X1 = 19;
-            this.lineShape6.X2 = 198;
-            this.lineShape6.Y1 = 343;
-            this.lineShape6.Y2 = 343;
-            // 
-            // lineShape7
-            // 
-            this.lineShape7.BorderColor = System.Drawing.Color.DimGray;
-            this.lineShape7.Enabled = false;
-            this.lineShape7.Name = "lineShape7";
-            this.lineShape7.X1 = 18;
-            this.lineShape7.X2 = 199;
-            this.lineShape7.Y1 = 277;
-            this.lineShape7.Y2 = 277;
-            // 
-            // lineShape8
-            // 
-            this.lineShape8.BorderColor = System.Drawing.Color.DimGray;
-            this.lineShape8.Enabled = false;
-            this.lineShape8.Name = "lineShape8";
-            this.lineShape8.X1 = 18;
-            this.lineShape8.X2 = 198;
-            this.lineShape8.Y1 = 214;
-            this.lineShape8.Y2 = 214;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(3, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 22);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "SGDE-ADSI 2142457";
-            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -473,7 +483,7 @@ namespace appE3_SGDE.Vistaa
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.MenuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -485,7 +495,7 @@ namespace appE3_SGDE.Vistaa
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.Panel PanelContenedor;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btnHome;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private System.Windows.Forms.Button btnEmpresa;

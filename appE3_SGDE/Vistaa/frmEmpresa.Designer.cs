@@ -41,7 +41,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(331, 30);
+            this.label1.Location = new System.Drawing.Point(526, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(135, 21);
             this.label1.TabIndex = 0;
@@ -53,10 +53,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.SteelBlue;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkTurquoise;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(354, 72);
+            this.button1.Location = new System.Drawing.Point(421, 72);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 33);
+            this.button1.Size = new System.Drawing.Size(354, 33);
             this.button1.TabIndex = 1;
             this.button1.Text = "Listar";
             this.button1.UseVisualStyleBackColor = false;
@@ -69,7 +72,7 @@
             this.dgvListarEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListarEmpresa.Location = new System.Drawing.Point(177, 111);
             this.dgvListarEmpresa.Name = "dgvListarEmpresa";
-            this.dgvListarEmpresa.Size = new System.Drawing.Size(457, 199);
+            this.dgvListarEmpresa.Size = new System.Drawing.Size(803, 482);
             this.dgvListarEmpresa.TabIndex = 2;
             // 
             // frmEmpresa
@@ -77,7 +80,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1146, 733);
             this.Controls.Add(this.dgvListarEmpresa);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);

@@ -16,6 +16,7 @@ namespace appE3_SGDE.Vistaa
         public frmMenu()
         {
             InitializeComponent();
+            mtdAbrirFormHijo(new frmBienvenida());
         }
 
         private void listarClientesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -61,6 +62,11 @@ namespace appE3_SGDE.Vistaa
         private void btnCliente_Click(object sender, EventArgs e)
         {
             mtdAbrirFormHijo(new frmClientes());
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            mtdAbrirFormHijo(new frmBienvenida());
         }
     }
 }

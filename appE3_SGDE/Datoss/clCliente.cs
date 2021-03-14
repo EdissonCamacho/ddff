@@ -4,8 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-using appE3_SGDE.Datoss;
-
 
 namespace appE3_SGDE.Datoss
 {
@@ -45,22 +43,5 @@ namespace appE3_SGDE.Datoss
 
             return listaClientes;
         }
-
-        public int mtdRegistrar()
-        {
-            string consultaInsert = "insert into cliente(nombre,apellido,direccion,telefono,email,nombreEmpresa)values" +
-                "('" + nombre + "','" + apellido + "','" + direccion + "','" + telefono + "','" + email + "','" + nombreEmpresa + "')";
-            clConexion objConexion = new clConexion();
-            int registrosAfectados = objConexion.mtdConectado(consultaInsert);
-            return registrosAfectados;
-        }
-        public int mtdEliminar()
-        {
-            clConexion objConexion = new clConexion();
-            string consulta = "delete from cliente where nombre='" + nombre + "'and apellido='" + apellido + "'and direccion='" + direccion + "'and telefono='" + telefono + "'and email='" + email + "'and nombreEmpresa='" + nombreEmpresa + "'";
-            int eliminar = objConexion.mtdConectado(consulta);
-            return eliminar;
-        }
-        }
     }
-
+}

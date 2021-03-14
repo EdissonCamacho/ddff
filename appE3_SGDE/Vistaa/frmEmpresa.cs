@@ -106,7 +106,7 @@ namespace appE3_SGDE.Vistaa
             }
             else
             {
-                MessageBox.Show("Error, no se pudo eliminar la EMPRESA");
+                MessageBox.Show("Error, fallo al eliminar la EMPRESA");
             }
         }
         private void dgvListarEmpresa_CellContentClick(object sender, DataGridViewCellEventArgs e)

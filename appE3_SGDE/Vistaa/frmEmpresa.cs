@@ -19,11 +19,14 @@ namespace appE3_SGDE.Vistaa
             InitializeComponent();
         }
 
-        List<clEmpresa> listEmpresa;
-        clEmpresa objEmpresa;
-
         private void frmListarEmpresa_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+            clEmpresa objEmpresa = new clEmpresa();
+            List<clEmpresa> listaEmpresa = new List<clEmpresa>();
+            listaEmpresa = objEmpresa.mtdListarEmpresa();
+            dgvListarEmpresa.DataSource = listaEmpresa;
+=======
             mtdCargar();
         }
         public void mtdCargarDatos()
@@ -106,7 +109,7 @@ namespace appE3_SGDE.Vistaa
             }
             else
             {
-                MessageBox.Show("Error, no se pudo eliminar el EMPLEADO");
+                MessageBox.Show("Error, no se pudo eliminar la EMPRESA");
             }
         }
         private void dgvListarEmpresa_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -120,7 +123,7 @@ namespace appE3_SGDE.Vistaa
                 txtTelefono.Text = dgvListarEmpresa.Rows[e.RowIndex].Cells["telefono"].FormattedValue.ToString();
                 cmbSector.Text = dgvListarEmpresa.Rows[e.RowIndex].Cells["sector"].FormattedValue.ToString();
             }
+>>>>>>> c35c8e5fe33685bd1a317446ab5121d474c4e56d
         }
     }
-    
 }

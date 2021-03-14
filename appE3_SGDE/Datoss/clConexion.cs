@@ -19,7 +19,7 @@ namespace appE3_SGDE.Datoss
         {
             try
             {
-                objConexion = new MySqlConnection("server=localhost; user id=root;Port=3306;database=dbdomicilio;Password=pipotaison123");
+                objConexion = new MySqlConnection("server=localhost; user id=root;Port=3306;database=dbdomicilio;Password=3134281540");
             }
             catch (Exception error)
             {
@@ -42,6 +42,15 @@ namespace appE3_SGDE.Datoss
             return tblDatos;
 
 
+
+        }
+        public int mtdConectado(string consulta)
+        {
+            objConexion.Open();
+            MySqlCommand comando = new MySqlCommand(consulta, objConexion);
+            int rows = comando.ExecuteNonQuery();
+            objConexion.Close();
+            return rows;
 
         }
     }

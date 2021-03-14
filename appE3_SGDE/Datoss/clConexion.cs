@@ -19,18 +19,13 @@ namespace appE3_SGDE.Datoss
         {
             try
             {
-                objConexion = new MySqlConnection("server=localhost; user id=root;Port=3306;database=dbdomicilio;Password=pipotaison123");
+                objConexion = new MySqlConnection("server=localhost; user id=root;Port=3306;database=domiciliosbd;Password=gimnacia");
             }
             catch (Exception error)
             {
                 MessageBox.Show(error.Message);
                 throw;
             }
-
-           
-
-
-
         }
         public DataTable mtdDesconectado(string consulta)
         {
@@ -40,9 +35,15 @@ namespace appE3_SGDE.Datoss
             adaptador.Fill(tblDatos);
             objConexion.Close();
             return tblDatos;
+        }
 
-
-
+        public int mtdConectado(string consulta)
+        {
+            objConexion.Open();
+            MySqlCommand comando = new MySqlCommand(consulta, objConexion);
+            int filasAfectadas = comando.ExecuteNonQuery();
+            objConexion.Close();
+            return filasAfectadas;
         }
     }
 }

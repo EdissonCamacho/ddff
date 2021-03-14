@@ -53,6 +53,7 @@ namespace appE3_SGDE.Vistaa
             this.btnlimpiar = new System.Windows.Forms.Button();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListarClientes)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -304,12 +305,28 @@ namespace appE3_SGDE.Vistaa
             this.lineShape1.Y1 = 361;
             this.lineShape1.Y2 = 361;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(645, 313);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(163, 44);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "modificar";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1146, 733);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnlimpiar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnRegistrar);
@@ -367,5 +384,6 @@ namespace appE3_SGDE.Vistaa
         private System.Windows.Forms.Button btnlimpiar;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
+        private System.Windows.Forms.Button button1;
     }
 }

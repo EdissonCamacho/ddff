@@ -17,7 +17,7 @@ public class TiempoDespacho
     clConexion objConexion;
     public List<clTiempoDespacho> mtdRegistrar()
     {
-        string consulta = ("select * from TiempoEmpleado");
+        string consulta = ("select * from TiempoDespacho");
 
         DataTable tblResultado = new DataTable();
         objConexion = new clConexion();

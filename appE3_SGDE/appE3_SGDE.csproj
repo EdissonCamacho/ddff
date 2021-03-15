@@ -64,6 +64,12 @@
     <Compile Include="Vistaa\frmBienvenida.Designer.cs">
       <DependentUpon>frmBienvenida.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistaa\frmBuscarEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistaa\frmBuscarEmpresa.Designer.cs">
+      <DependentUpon>frmBuscarEmpresa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistaa\frmEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </Compile>
     <EmbeddedResource Include="Vistaa\frmBienvenida.resx">
       <DependentUpon>frmBienvenida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistaa\frmBuscarEmpresa.resx">
+      <DependentUpon>frmBuscarEmpresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistaa\frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>

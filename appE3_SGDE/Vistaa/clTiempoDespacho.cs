@@ -3,7 +3,7 @@
 public class TiempoDespacho
 {
 	public TiempoDespacho()
-	{
+    { 
 
      public int idTiempoDespacho { get; set; }
     public string Ciudad { get; set; }

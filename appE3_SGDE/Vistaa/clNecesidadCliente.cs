@@ -33,7 +33,7 @@ public class ClNecesidadCliente
 
         {
         clNecesidadCliente objNecesidadCliente = new clNecesidadCliente();
-    objNecesidadCliente.idNecesidadCliente = int.Parse(tblResultado.Rows[i]["idNecesidadCliente"].ToString());
+        objNecesidadCliente.idNecesidadCliente = int.Parse(tblResultado.Rows[i]["idNecesidadCliente"].ToString());
     objNecesidadCliente.Nombres = tblResultado.Rows[i]["Nombres"].ToString();
     objNecesidadCliente.Apellidos = tblResultado.Rows[i]["Apellidos"].ToString();
     objNecesidadCliente.Direccion = tblResultado.Rows[i]["Direccion"].ToString();

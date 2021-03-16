@@ -68,5 +68,10 @@ namespace appE3_SGDE.Vistaa
         {
             mtdAbrirFormHijo(new frmBienvenida());
         }
+
+        private void btnProducto_Click(object sender, EventArgs e)
+        {
+            mtdAbrirFormHijo(new frmProducto());
+        }
     }
 }

@@ -287,6 +287,7 @@ namespace appE3_SGDE.Vistaa
             this.btnProducto.TabIndex = 6;
             this.btnProducto.Text = "Producto";
             this.btnProducto.UseVisualStyleBackColor = true;
+            this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
             // 
             // panel2
             // 

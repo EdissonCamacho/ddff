@@ -51,14 +51,14 @@ namespace appE3_SGDE.Vistaa
             int filasAfectadas = objEmpresa.mtdRegistrar();
             if (filasAfectadas > 0)
             {
-                MessageBox.Show("Empresa REGISTRADA", "Empresa", MessageBoxButtons.OK);
+                MessageBox.Show("Empresa Registrada", "SGDE", MessageBoxButtons.OK);
 
                 mtdCargar();
 
             }
             else
             {
-                MessageBox.Show("Error, no se puedo registrar", "Empresa", MessageBoxButtons.OK);
+                MessageBox.Show("Error Al Registrar", "SGDE", MessageBoxButtons.OK);
             }
         }
 
@@ -71,7 +71,7 @@ namespace appE3_SGDE.Vistaa
             {
                 if (listEmpresa[i].nombre == txtNombreE.Text && listEmpresa[i].direccion == txtDireccion.Text && listEmpresa[i].telefono == txtTelefono.Text && listEmpresa[i].sector == cmbSector.Text)
                 {
-                    MessageBox.Show("empresa ya REGISTRADA");
+                    MessageBox.Show("Empresa Registrada");
                     contador = contador + 1;
                 }
             }
@@ -80,13 +80,13 @@ namespace appE3_SGDE.Vistaa
                 int filasAfectadas = objEmpresa.mtdActualizar();
                 if (filasAfectadas > 0)
                 {
-                    MessageBox.Show("Se actualizo correctamente");
+                    MessageBox.Show("Se Actualizo Correctamente");
                     mtdCargar();
 
                 }
                 else
                 {
-                    MessageBox.Show("Error al actualizar");
+                    MessageBox.Show("Error Al Actualizar");
                 }
             }
             
@@ -100,13 +100,13 @@ namespace appE3_SGDE.Vistaa
 
             if (objEmpresa.mtdEliminar() > 0)
             {
-                MessageBox.Show("Empresa ELIMINADA");
+                MessageBox.Show("Empresa Eliminada");
                 mtdCargar();
 
             }
             else
             {
-                MessageBox.Show("Error, no se pudo eliminar la EMPRESA");
+                MessageBox.Show("Error, no se pudo eliminar la empresa");
             }
 
         }

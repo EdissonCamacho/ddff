@@ -74,6 +74,24 @@ namespace appE3_SGDE.Datoss
             return eliminar;
 
         }
+        public DataTable mtdBuscar()
+        {
+            string consulta = "select * from empresa where sector='" + sector + "'";
+            clConexion objConexion = new clConexion();
+            DataTable tblDatos = new DataTable();
+            tblDatos = objConexion.mtdDesconectado(consulta);
+            return tblDatos;
+        }
+
+        public DataTable mtdConsultarSectores()
+        {
+            string consulta = "Select distinct(sector) from empresa";
+            clConexion objConexion = new clConexion();
+            DataTable tblCargar = new DataTable();
+            tblCargar = objConexion.mtdDesconectado(consulta);
+            return tblCargar;
+
+        }
 
     }
 }

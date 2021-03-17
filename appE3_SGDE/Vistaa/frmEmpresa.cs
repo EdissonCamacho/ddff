@@ -123,5 +123,12 @@ namespace appE3_SGDE.Vistaa
                 cmbSector.Text = dgvListarEmpresa.Rows[e.RowIndex].Cells["sector"].FormattedValue.ToString();
             }
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            frmBuscarEmpresa objfrmBuscar = new frmBuscarEmpresa();
+            objfrmBuscar.Show();
+
+        }
     }
 }

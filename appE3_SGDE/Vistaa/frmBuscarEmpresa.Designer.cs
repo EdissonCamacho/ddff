@@ -35,6 +35,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.dgvBuscar = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscar)).BeginInit();
             this.SuspendLayout();
@@ -116,12 +117,24 @@
             this.dgvBuscar.Size = new System.Drawing.Size(564, 251);
             this.dgvBuscar.TabIndex = 15;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(970, 63);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Volver al Inicio";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // frmBuscarEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1130, 694);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvBuscar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
@@ -149,5 +162,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dgvBuscar;
+        private System.Windows.Forms.Label label3;
     }
 }

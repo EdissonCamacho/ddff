@@ -28,17 +28,7 @@ namespace appE3_SGDE.Vistaa
 
         }
 
-        private void btnRegistrar_Click(object sender, EventArgs e)
-        {
-            clEmpresa objEmpresa = new clEmpresa();
-            objEmpresa.sector = cmbBuscar.Text;
-            DataTable tblDatos = new DataTable();
-            tblDatos = objEmpresa.mtdBuscar();
-
-
-            dgvBuscar.DataSource = tblDatos;
-
-        }
+        
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             frmBuscarEmpresa objBuscarEmpresa = new frmBuscarEmpresa();
@@ -48,5 +38,15 @@ namespace appE3_SGDE.Vistaa
             objMenu.Show();
         }
 
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            clEmpresa objEmpresa = new clEmpresa();
+            objEmpresa.sector = cmbBuscar.Text;
+            DataTable tblDatos = new DataTable();
+            tblDatos = objEmpresa.mtdBuscar();
+
+
+            dgvBuscar.DataSource = tblDatos;
+        }
     }
 }

@@ -45,6 +45,10 @@ namespace appE3_SGDE.Datoss
 
             return listaClientes;
         }
+        public void mtdFiltrarClientes()
+        {
+            string consultaFiltrar = "select* from ";
+        }
 
         public int mtdRegistrar()
         {

@@ -25,25 +25,26 @@ namespace appE3_SGDE.Vistaa
         {
             //mtdCargar();
         }
-        /*
-        public void mtdCargarDatos()
-        {
-            objProducto.nombreProducto = txtProducto.Text;
-            objProducto.valorAproximado = int.Parse(txtValorAprox.Text);
-            objProducto.descripcion = txtDescripcion.Text;
-            objProducto.idEmpresa = int.Parse(txtEmpresa.Text);
 
-        }
-        public void mtdCargar()
-        {
-            listProductos = new List<clProducto>();
-            objProducto = new clProducto();
-            listProductos = objProducto.mtdConsultaProducto();
-            dgvListarProducto.DataSource = listProductos;
-        }
-        // FALTA POR TERMINAR 
-        */
-        
+        /*
+public void mtdCargarDatos()
+{
+   objProducto.nombreProducto = txtProducto.Text;
+   objProducto.valorAproximado = int.Parse(txtValorAprox.Text);
+   objProducto.descripcion = txtDescripcion.Text;
+   objProducto.idEmpresa = int.Parse(txtEmpresa.Text);
+
+}
+public void mtdCargar()
+{
+   listProductos = new List<clProducto>();
+   objProducto = new clProducto();
+   listProductos = objProducto.mtdConsultaProducto();
+   dgvListarProducto.DataSource = listProductos;
+}
+// FALTA POR TERMINAR 
+*/
+
     }
     
 }

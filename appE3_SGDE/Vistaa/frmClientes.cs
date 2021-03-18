@@ -98,6 +98,13 @@ namespace appE3_SGDE.Vistaa
 
 
         }
+
+        private void btnBuscarCliente_Click(object sender, EventArgs e)
+        {
+
+            frmBuscarCliente objBuscarCliente = new frmBuscarCliente();
+            objBuscarCliente.ShowDialog();
+        }
     }
 }
 

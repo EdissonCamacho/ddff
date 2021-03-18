@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using appE3_SGDE.Vistaa;
 
 namespace appE3_SGDE.Vistaa
 {
@@ -89,7 +90,7 @@ namespace appE3_SGDE.Vistaa
                     MessageBox.Show("Error Al Actualizar");
                 }
             }
-            
+
 
         }
         int idEmpresaBorrar = 0;
@@ -126,9 +127,9 @@ namespace appE3_SGDE.Vistaa
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            frmBuscarEmpresa objfrmBuscar = new frmBuscarEmpresa();
-            objfrmBuscar.Show();
 
+            frmBuscarEmpresa objBuscarEmpresa = new frmBuscarEmpresa();
+            objBuscarEmpresa.ShowDialog();
         }
     }
 }

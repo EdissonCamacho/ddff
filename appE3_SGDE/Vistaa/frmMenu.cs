@@ -41,7 +41,7 @@ namespace appE3_SGDE.Vistaa
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void mtdAbrirFormHijo(object formhijo)
+        public void mtdAbrirFormHijo(object formhijo)
         {
             if (this.PanelContenedor.Controls.Count>0)
                 this.PanelContenedor.Controls.RemoveAt(0);

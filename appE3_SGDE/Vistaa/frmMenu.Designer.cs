@@ -495,7 +495,6 @@ namespace appE3_SGDE.Vistaa
         private System.Windows.Forms.Panel MenuVertical;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnCerrar;
-        private System.Windows.Forms.Panel PanelContenedor;
         private System.Windows.Forms.PictureBox btnHome;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
@@ -522,5 +521,6 @@ namespace appE3_SGDE.Vistaa
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape4;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Panel PanelContenedor;
     }
 }

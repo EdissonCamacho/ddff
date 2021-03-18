@@ -39,11 +39,14 @@ namespace appE3_SGDE.Vistaa
             dgvBuscar.DataSource = tblDatos;
 
         }
-
-        private void label3_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            frmEmpresa objfrmBuscar = new frmEmpresa();
-            objfrmBuscar.Show();
+            frmBuscarEmpresa objBuscarEmpresa = new frmBuscarEmpresa();
+            this.Close();
+            frmMenu objMenu = new frmMenu();
+            objMenu.mtdAbrirFormHijo(new frmEmpresa());
+            objMenu.Show();
         }
+
     }
 }

@@ -45,10 +45,6 @@ namespace appE3_SGDE.Datoss
 
             return listaClientes;
         }
-        public void mtdFiltrarClientes()
-        {
-            string consultaFiltrar = "select* from ";
-        }
 
         public int mtdRegistrar()
         {
@@ -65,6 +61,14 @@ namespace appE3_SGDE.Datoss
             int eliminar = objConexion.mtdConectado(consulta);
             return eliminar;
         }
+        public DataTable mtdBuscar()
+        {
+            string consulta = "select * from cliente where telefono='" + telefono + "'";
+            clConexion objConexion = new clConexion();
+            DataTable tblDatos = new DataTable();
+            tblDatos = objConexion.mtdDesconectado(consulta);
+            return tblDatos;
         }
     }
+}
 

@@ -73,5 +73,12 @@ namespace appE3_SGDE.Vistaa
         {
             mtdAbrirFormHijo(new frmProducto());
         }
+
+        private void FechaHora_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString("h:mm:ss");
+            lblFecha.Text = DateTime.Now.ToShortDateString();
+
+        }
     }
 }

@@ -30,10 +30,13 @@ namespace appE3_SGDE.Vistaa
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscarCliente));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dgvFiltrarDocumento = new System.Windows.Forms.DataGridView();
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFiltrarDocumento = new System.Windows.Forms.TextBox();
@@ -42,6 +45,8 @@ namespace appE3_SGDE.Vistaa
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dgvFiltrarDocumento = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFiltrarDocumento)).BeginInit();
@@ -84,15 +89,6 @@ namespace appE3_SGDE.Vistaa
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // dgvFiltrarDocumento
-            // 
-            this.dgvFiltrarDocumento.BackgroundColor = System.Drawing.Color.White;
-            this.dgvFiltrarDocumento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFiltrarDocumento.Location = new System.Drawing.Point(12, 211);
-            this.dgvFiltrarDocumento.Name = "dgvFiltrarDocumento";
-            this.dgvFiltrarDocumento.Size = new System.Drawing.Size(1122, 510);
-            this.dgvFiltrarDocumento.TabIndex = 24;
-            // 
             // btnFiltrar
             // 
             this.btnFiltrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
@@ -101,7 +97,7 @@ namespace appE3_SGDE.Vistaa
             this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFiltrar.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFiltrar.ForeColor = System.Drawing.Color.White;
-            this.btnFiltrar.Location = new System.Drawing.Point(650, 76);
+            this.btnFiltrar.Location = new System.Drawing.Point(650, 42);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(230, 57);
             this.btnFiltrar.TabIndex = 23;
@@ -114,16 +110,16 @@ namespace appE3_SGDE.Vistaa
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(294, 96);
+            this.label1.Location = new System.Drawing.Point(327, 85);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 22);
+            this.label1.Size = new System.Drawing.Size(87, 22);
             this.label1.TabIndex = 21;
-            this.label1.Text = "Documento";
+            this.label1.Text = "Telefono";
             // 
             // txtFiltrarDocumento
             // 
             this.txtFiltrarDocumento.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFiltrarDocumento.Location = new System.Drawing.Point(420, 93);
+            this.txtFiltrarDocumento.Location = new System.Drawing.Point(420, 82);
             this.txtFiltrarDocumento.Name = "txtFiltrarDocumento";
             this.txtFiltrarDocumento.Size = new System.Drawing.Size(224, 31);
             this.txtFiltrarDocumento.TabIndex = 25;
@@ -173,17 +169,76 @@ namespace appE3_SGDE.Vistaa
             this.panel4.Size = new System.Drawing.Size(1144, 11);
             this.panel4.TabIndex = 29;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(650, 105);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(230, 57);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Limpiar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dgvFiltrarDocumento
+            // 
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.dgvFiltrarDocumento.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvFiltrarDocumento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvFiltrarDocumento.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvFiltrarDocumento.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(91)))));
+            this.dgvFiltrarDocumento.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvFiltrarDocumento.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvFiltrarDocumento.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFiltrarDocumento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvFiltrarDocumento.ColumnHeadersHeight = 30;
+            this.dgvFiltrarDocumento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvFiltrarDocumento.EnableHeadersVisualStyles = false;
+            this.dgvFiltrarDocumento.GridColor = System.Drawing.Color.SteelBlue;
+            this.dgvFiltrarDocumento.Location = new System.Drawing.Point(21, 207);
+            this.dgvFiltrarDocumento.Name = "dgvFiltrarDocumento";
+            this.dgvFiltrarDocumento.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFiltrarDocumento.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvFiltrarDocumento.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvFiltrarDocumento.Size = new System.Drawing.Size(1109, 502);
+            this.dgvFiltrarDocumento.TabIndex = 31;
+            // 
             // frmBuscarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1146, 733);
+            this.Controls.Add(this.dgvFiltrarDocumento);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtFiltrarDocumento);
-            this.Controls.Add(this.dgvFiltrarDocumento);
             this.Controls.Add(this.btnFiltrar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -204,7 +259,6 @@ namespace appE3_SGDE.Vistaa
 
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dgvFiltrarDocumento;
         private System.Windows.Forms.Button btnFiltrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -214,5 +268,7 @@ namespace appE3_SGDE.Vistaa
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dgvFiltrarDocumento;
     }
 }

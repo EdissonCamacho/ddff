@@ -29,8 +29,11 @@ namespace appE3_SGDE.Vistaa
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
@@ -61,6 +64,7 @@ namespace appE3_SGDE.Vistaa
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PanelContenedor = new System.Windows.Forms.Panel();
+            this.FechaHora = new System.Windows.Forms.Timer(this.components);
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -72,7 +76,9 @@ namespace appE3_SGDE.Vistaa
             // BarraTitulo
             // 
             this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.BarraTitulo.Controls.Add(this.lblFecha);
             this.BarraTitulo.Controls.Add(this.label1);
+            this.BarraTitulo.Controls.Add(this.lblHora);
             this.BarraTitulo.Controls.Add(this.btnMinimizar);
             this.BarraTitulo.Controls.Add(this.btnCerrar);
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -80,6 +86,28 @@ namespace appE3_SGDE.Vistaa
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(1366, 35);
             this.BarraTitulo.TabIndex = 0;
+            // 
+            // lblHora
+            // 
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("Century Gothic", 18F);
+            this.lblHora.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblHora.Location = new System.Drawing.Point(717, 2);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(96, 30);
+            this.lblHora.TabIndex = 5;
+            this.lblHora.Text = "lblHora";
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 18F);
+            this.lblFecha.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblFecha.Location = new System.Drawing.Point(588, 2);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(112, 30);
+            this.lblFecha.TabIndex = 4;
+            this.lblFecha.Text = "lblfecha";
             // 
             // label1
             // 
@@ -464,6 +492,11 @@ namespace appE3_SGDE.Vistaa
             this.PanelContenedor.Size = new System.Drawing.Size(1146, 733);
             this.PanelContenedor.TabIndex = 2;
             // 
+            // FechaHora
+            // 
+            this.FechaHora.Enabled = true;
+            this.FechaHora.Tick += new System.EventHandler(this.FechaHora_Tick);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -522,5 +555,8 @@ namespace appE3_SGDE.Vistaa
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Panel PanelContenedor;
+        private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Timer FechaHora;
     }
 }

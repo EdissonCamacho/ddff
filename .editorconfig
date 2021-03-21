@@ -5,3 +5,6 @@ dotnet_diagnostic.IDE1006.severity = none
 
 # IDE0055: Fijar formato
 dotnet_diagnostic.IDE0055.severity = none
+
+# IDE0040: Agregar modificadores de accesibilidad
+dotnet_style_require_accessibility_modifiers = never

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
+using appE3_SGDE.Datoss;
 
 namespace appE3_SGDE.Vistaa
 {
@@ -15,52 +15,15 @@ namespace appE3_SGDE.Vistaa
         public string Direccion { get; set; }
         public string Telefono { get; set; }
         public string Email { get; set; }
-        public string Clave { get; set; }
-        public int  mtdRegistrar { get; set; }
+        public string Disponibilidad { get; set; }
+        public string clave { get; set; }
+
        
+        
+        
 
-        clSocio objSocio;
-        private readonly List<clSocio> mtdRegistrar1;
 
-        public List<clSocio> GetmtdRegistrar()
-        {
-            return mtdRegistrar1;
-        }
 
-        internal int mtdConectado(string consulta)
-           
-        {
-            throw new NotImplementedException();
-        }
 
-         
-    }
-     public int mtdRegistrar()
-    {
-        string Nombre = null;
-        string Apellido = null;
-        string Direccion = null;
-        string Clave = null;
-        string Telefono = null;
-        string Email = null;
-        string consulta = "insert into socio (Nombre,Apellido,Direccion,Telefono,email,Clave) values ('" + Nombre + "','" + Apellido + "','" + Direccion + "','" + Telefono + "','" + Email + "','" + Clave + "')";
-        clSocio objConexion = new clSocio();
-        int resultado = objConexion.mtdConectado(consulta);
-        return resultado;
-
-    }
-
-    public int mtdActualizar()
-    {
-
-        string Nombre = null;
-        string Direccion = null;
-        string Email = null;
-        string consulta = "update Socio set documento='" + Nombre + "',Apellido'" + Direccion + "', Telefono'" + Email + "',Clave'";
-        clSocio objConexion = new clSocio();
-        int filasAfectadas = objConexion.mtdConectado(consulta);
-        return filasAfectadas;
     }
 }
-
-    

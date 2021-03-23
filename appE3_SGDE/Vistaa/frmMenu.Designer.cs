@@ -32,9 +32,9 @@ namespace appE3_SGDE.Vistaa
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.BarraTitulo = new System.Windows.Forms.Panel();
-            this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.MenuVertical = new System.Windows.Forms.Panel();
@@ -87,17 +87,6 @@ namespace appE3_SGDE.Vistaa
             this.BarraTitulo.Size = new System.Drawing.Size(1366, 35);
             this.BarraTitulo.TabIndex = 0;
             // 
-            // lblHora
-            // 
-            this.lblHora.AutoSize = true;
-            this.lblHora.Font = new System.Drawing.Font("Century Gothic", 18F);
-            this.lblHora.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblHora.Location = new System.Drawing.Point(717, 2);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(96, 30);
-            this.lblHora.TabIndex = 5;
-            this.lblHora.Text = "lblHora";
-            // 
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
@@ -119,6 +108,17 @@ namespace appE3_SGDE.Vistaa
             this.label1.Size = new System.Drawing.Size(191, 22);
             this.label1.TabIndex = 3;
             this.label1.Text = "SGDE-ADSI 2142457";
+            // 
+            // lblHora
+            // 
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("Century Gothic", 18F);
+            this.lblHora.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblHora.Location = new System.Drawing.Point(721, 2);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(96, 30);
+            this.lblHora.TabIndex = 5;
+            this.lblHora.Text = "lblHora";
             // 
             // btnMinimizar
             // 

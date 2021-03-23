@@ -14,6 +14,8 @@ namespace appE3_SGDE.Datoss
         public string direccion { get; set; }
         public string telefono { get; set; }
         public string sector { get; set; }
+        public string horaAtencion { get; set; }
+        public string estado { get; set; }
 
         public List<clEmpresa> mtdConsultaEmpresa()
         {
@@ -31,6 +33,8 @@ namespace appE3_SGDE.Datoss
                 objEmpresa.direccion = tblDatos.Rows[i]["direccion"].ToString();
                 objEmpresa.telefono = tblDatos.Rows[i]["telefono"].ToString();
                 objEmpresa.sector = tblDatos.Rows[i]["sector"].ToString();
+                objEmpresa.horaAtencion = tblDatos.Rows[i]["horaAtencion"].ToString();
+                objEmpresa.estado = tblDatos.Rows[i]["estado"].ToString();
 
                 listEmpresa.Add(objEmpresa);
 
@@ -49,8 +53,10 @@ namespace appE3_SGDE.Datoss
         public int mtdRegistrar()
         {
 
-            string consulta = "insert into empresa(nombre,direccion,telefono,sector) " +
-                "values ('" + nombre + "','" + direccion + "','" + telefono + "','" + sector + "')";
+            string consulta = "insert into empresa(nombre,direccion,telefono,sector,horaAtencion,estado) " +
+                "values ('" + nombre + "','" + direccion + "','" + telefono + "','" + sector + "'," +
+                "'" + horaAtencion + "','" + estado + "')";
+
             clConexion objConexion = new clConexion();
             int Datos = objConexion.mtdConectado(consulta);
             return Datos;
@@ -60,7 +66,9 @@ namespace appE3_SGDE.Datoss
         public int mtdActualizar()
         {
             string consulta = "update empresa set nombre='" + nombre + "',direccion= '" + direccion +
-                "', telefono='" + telefono + "', sector='" + sector + "' where nombre='" + nombre + "'";
+                "', telefono='" + telefono + "', sector='" + sector + "', horaAtencion='" + horaAtencion + "', " +
+                "estado='" + estado + "' where nombre='" + nombre + "'";
+
             clConexion objConexion = new clConexion();
             int filasAfectadas = objConexion.mtdConectado(consulta);
             return filasAfectadas;

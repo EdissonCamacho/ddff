@@ -33,6 +33,14 @@ namespace appE3_SGDE.Vistaa
             objEmpresa.direccion = txtDireccion.Text;
             objEmpresa.telefono = txtTelefono.Text;
             objEmpresa.sector = cmbSector.Text;
+            if (rbAbierto.Checked == true)
+            {
+                objEmpresa.estado = "Abierto";
+            }
+            else
+            {
+                objEmpresa.estado = "Cerrado";
+            }
 
 
         }
@@ -111,8 +119,15 @@ namespace appE3_SGDE.Vistaa
             }
 
         }
+        
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
 
-        private void dgvListarEmpresa_CellContentClick(object sender, DataGridViewCellEventArgs e)
+            frmBuscarEmpresa objBuscarEmpresa = new frmBuscarEmpresa();
+            objBuscarEmpresa.ShowDialog();
+        }
+
+        private void dgvListarEmpresa_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvListarEmpresa.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
@@ -122,14 +137,18 @@ namespace appE3_SGDE.Vistaa
                 txtDireccion.Text = dgvListarEmpresa.Rows[e.RowIndex].Cells["direccion"].FormattedValue.ToString();
                 txtTelefono.Text = dgvListarEmpresa.Rows[e.RowIndex].Cells["telefono"].FormattedValue.ToString();
                 cmbSector.Text = dgvListarEmpresa.Rows[e.RowIndex].Cells["sector"].FormattedValue.ToString();
+                txtHorario.Text = dgvListarEmpresa.Rows[e.RowIndex].Cells["horaAtencion"].FormattedValue.ToString();
+                string estado = dgvListarEmpresa.Rows[e.RowIndex].Cells["estado"].FormattedValue.ToString();
+                if (estado == "Abierto")
+                {
+                    rbAbierto.Checked = true;
+                }
+                else
+                {
+                    rbCerrado.Checked = true;
+                }
+
             }
-        }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-
-            frmBuscarEmpresa objBuscarEmpresa = new frmBuscarEmpresa();
-            objBuscarEmpresa.ShowDialog();
         }
     }
 }

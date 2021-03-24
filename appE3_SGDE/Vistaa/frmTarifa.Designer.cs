@@ -151,7 +151,7 @@
             this.rtbDescripcion.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbDescripcion.Location = new System.Drawing.Point(409, 270);
             this.rtbDescripcion.Name = "rtbDescripcion";
-            this.rtbDescripcion.Size = new System.Drawing.Size(164, 64);
+            this.rtbDescripcion.Size = new System.Drawing.Size(417, 64);
             this.rtbDescripcion.TabIndex = 10;
             this.rtbDescripcion.Text = "";
             // 
@@ -163,7 +163,7 @@
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(607, 87);
+            this.btnRegistrar.Location = new System.Drawing.Point(596, 52);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(230, 57);
             this.btnRegistrar.TabIndex = 12;
@@ -179,7 +179,7 @@
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Location = new System.Drawing.Point(607, 156);
+            this.btnActualizar.Location = new System.Drawing.Point(596, 121);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(230, 57);
             this.btnActualizar.TabIndex = 13;
@@ -195,7 +195,7 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(607, 225);
+            this.btnEliminar.Location = new System.Drawing.Point(596, 190);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(230, 57);
             this.btnEliminar.TabIndex = 14;
@@ -213,9 +213,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(511, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 30);
+            this.label1.Size = new System.Drawing.Size(122, 30);
             this.label1.TabIndex = 4;
-            this.label1.Text = "TARIFA";
+            this.label1.Text = "COSTOS";
             // 
             // panel1
             // 

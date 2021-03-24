@@ -33,6 +33,7 @@ namespace appE3_SGDE.Vistaa
             objEmpresa.direccion = txtDireccion.Text;
             objEmpresa.telefono = txtTelefono.Text;
             objEmpresa.sector = cmbSector.Text;
+            objEmpresa.horaAtencion = txtHorario.Text;
             if (rbAbierto.Checked == true)
             {
                 objEmpresa.estado = "Abierto";
@@ -78,7 +79,7 @@ namespace appE3_SGDE.Vistaa
             int contador = 0;
             for (int i = 0; i < listEmpresa.Count; i++)
             {
-                if (listEmpresa[i].nombre == txtNombreE.Text && listEmpresa[i].direccion == txtDireccion.Text && listEmpresa[i].telefono == txtTelefono.Text && listEmpresa[i].sector == cmbSector.Text)
+                if (listEmpresa[i].nombre == txtNombreE.Text && listEmpresa[i].direccion == txtDireccion.Text && listEmpresa[i].telefono == txtTelefono.Text && listEmpresa[i].sector == cmbSector.Text && listEmpresa[i].horaAtencion == txtHorario.Text)
                 {
                     MessageBox.Show("Empresa Registrada");
                     contador = contador + 1;

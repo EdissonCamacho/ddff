@@ -275,7 +275,7 @@
             this.dgvListarEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvListarEmpresa.EnableHeadersVisualStyles = false;
             this.dgvListarEmpresa.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvListarEmpresa.Location = new System.Drawing.Point(214, 364);
+            this.dgvListarEmpresa.Location = new System.Drawing.Point(88, 364);
             this.dgvListarEmpresa.Name = "dgvListarEmpresa";
             this.dgvListarEmpresa.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -292,7 +292,7 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.dgvListarEmpresa.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvListarEmpresa.Size = new System.Drawing.Size(718, 318);
+            this.dgvListarEmpresa.Size = new System.Drawing.Size(964, 318);
             this.dgvListarEmpresa.TabIndex = 17;
             this.dgvListarEmpresa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListarEmpresa_CellContentClick_1);
             // 
@@ -329,11 +329,11 @@
             // rbAbierto
             // 
             this.rbAbierto.AutoSize = true;
-            this.rbAbierto.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbAbierto.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbAbierto.ForeColor = System.Drawing.Color.Lime;
             this.rbAbierto.Location = new System.Drawing.Point(312, 294);
             this.rbAbierto.Name = "rbAbierto";
-            this.rbAbierto.Size = new System.Drawing.Size(79, 22);
+            this.rbAbierto.Size = new System.Drawing.Size(96, 26);
             this.rbAbierto.TabIndex = 21;
             this.rbAbierto.TabStop = true;
             this.rbAbierto.Text = "Abierto";
@@ -342,11 +342,11 @@
             // rbCerrado
             // 
             this.rbCerrado.AutoSize = true;
-            this.rbCerrado.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbCerrado.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbCerrado.ForeColor = System.Drawing.Color.Red;
             this.rbCerrado.Location = new System.Drawing.Point(425, 295);
             this.rbCerrado.Name = "rbCerrado";
-            this.rbCerrado.Size = new System.Drawing.Size(82, 22);
+            this.rbCerrado.Size = new System.Drawing.Size(105, 26);
             this.rbCerrado.TabIndex = 22;
             this.rbCerrado.TabStop = true;
             this.rbCerrado.Text = "Cerrado";

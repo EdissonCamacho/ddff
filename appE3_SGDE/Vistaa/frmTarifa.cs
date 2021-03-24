@@ -120,6 +120,7 @@ namespace appE3_SGDE.Vistaa
                 txtDesde.Text = dgvTarifa.Rows[e.RowIndex].Cells["desde"].FormattedValue.ToString();
                 txtHasta.Text = dgvTarifa.Rows[e.RowIndex].Cells["hasta"].FormattedValue.ToString();
                 rtbDescripcion.Text = dgvTarifa.Rows[e.RowIndex].Cells["descripcion"].FormattedValue.ToString();
+                txtValor.Text = dgvTarifa.Rows[e.RowIndex].Cells["valor"].FormattedValue.ToString();
                 
 
             }

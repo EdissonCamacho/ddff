@@ -207,6 +207,7 @@ namespace appE3_SGDE.Vistaa
             this.btnCostos.TabIndex = 14;
             this.btnCostos.Text = "Costos";
             this.btnCostos.UseVisualStyleBackColor = true;
+            this.btnCostos.Click += new System.EventHandler(this.btnCostos_Click);
             // 
             // panel6
             // 

@@ -80,5 +80,10 @@ namespace appE3_SGDE.Vistaa
             lblFecha.Text = DateTime.Now.ToShortDateString();
 
         }
+
+        private void btnCostos_Click(object sender, EventArgs e)
+        {
+            mtdAbrirFormHijo(new frmTarifa());
+        }
     }
 }

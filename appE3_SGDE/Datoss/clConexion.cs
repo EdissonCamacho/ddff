@@ -19,7 +19,7 @@ namespace appE3_SGDE.Datoss
         {
             try
             {
-                objConexion = new MySqlConnection("server=localhost; user id=root;Port=3306;database=dbdomicilio;Password=3134281540");
+                objConexion = new MySqlConnection("server=localhost; user id=root;Port=3306;database=domiciliosbd;Password=gimnacia");
             }
             catch (Exception error)
             {

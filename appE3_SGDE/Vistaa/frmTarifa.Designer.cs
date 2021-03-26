@@ -50,6 +50,7 @@
             this.dgvTarifa = new System.Windows.Forms.DataGridView();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.btnVerMapa = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTarifa)).BeginInit();
             this.SuspendLayout();
@@ -290,12 +291,29 @@
             this.shapeContainer1.TabIndex = 19;
             this.shapeContainer1.TabStop = false;
             // 
+            // btnVerMapa
+            // 
+            this.btnVerMapa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btnVerMapa.FlatAppearance.BorderSize = 0;
+            this.btnVerMapa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnVerMapa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerMapa.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerMapa.ForeColor = System.Drawing.Color.White;
+            this.btnVerMapa.Location = new System.Drawing.Point(841, 121);
+            this.btnVerMapa.Name = "btnVerMapa";
+            this.btnVerMapa.Size = new System.Drawing.Size(230, 57);
+            this.btnVerMapa.TabIndex = 20;
+            this.btnVerMapa.Text = "Ver Mapa";
+            this.btnVerMapa.UseVisualStyleBackColor = false;
+            this.btnVerMapa.Click += new System.EventHandler(this.btnVerMapa_Click);
+            // 
             // frmTarifa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1130, 694);
+            this.Controls.Add(this.btnVerMapa);
             this.Controls.Add(this.dgvTarifa);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnEliminar);
@@ -344,5 +362,6 @@
         private System.Windows.Forms.DataGridView dgvTarifa;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
+        private System.Windows.Forms.Button btnVerMapa;
     }
 }

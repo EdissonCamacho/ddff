@@ -125,6 +125,12 @@ namespace appE3_SGDE.Vistaa
 
             }
         }
+
+        private void btnVerMapa_Click(object sender, EventArgs e)
+        {
+            frmMapa objMapa = new frmMapa();
+            objMapa.Show();
+        }
     }
 }
 

@@ -131,6 +131,13 @@ namespace appE3_SGDE.Vistaa
             frmMapa objMapa = new frmMapa();
             objMapa.Show();
         }
+
+        private void btnVerInforme_Click(object sender, EventArgs e)
+        {
+            frmInformeTarifa objInformes = new frmInformeTarifa();
+            objInformes.mtdCargarInforme(listTarifa);
+            objInformes.Show();
+        }
     }
 }
 

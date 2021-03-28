@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace appE3_SGDE.Datoss
 {
-    class clTarifa
+    public class clTarifa
     {
         public int idTarifa { get; set; }
         public string nombreSector { get; set; }

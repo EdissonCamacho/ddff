@@ -74,29 +74,29 @@ namespace appE3_SGDE.Vistaa
             txtNombreEmpresa.Text = "";
         }
 
-
+        int idCLienteBorrar = 0;
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             clCliente objCliente = new clCliente();
-            DialogResult opcion = MessageBox.Show("Desea eliminar el el cliente" + txtNombre.Text + " " + txtApellido.Text, "Eliminar Cliente", MessageBoxButtons.YesNo);
-            if (opcion == DialogResult.Yes)
+            objCliente.idCliente = idCLienteBorrar;
+
+            if (objCliente.mtdEliminar() > 0)
             {
-                int filasAfectadas = objCliente.mtdEliminar();
-                if (filasAfectadas > 0)
-                {
-                    MessageBox.Show("Se elimino correctamente");
-                    mtdCargarGrind();
+                MessageBox.Show("Cliente Eliminado");
+                mtdCargarGrind();
 
-                }
-                else
-                {
-                    MessageBox.Show("No se pudo eliminar la fila seleccionada");
-                }
             }
+            else
+            {
+                MessageBox.Show("Error, no se pudo eliminar el cliente");
+            }
+        }
 
+        private void btnBuscarCliente_Click(object sender, EventArgs e)
+        {
 
-
-
+            frmBuscarCliente objBuscarCliente = new frmBuscarCliente();
+            objBuscarCliente.ShowDialog();
         }
     }
 }

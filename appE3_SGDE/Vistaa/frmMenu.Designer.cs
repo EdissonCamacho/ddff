@@ -29,9 +29,12 @@ namespace appE3_SGDE.Vistaa
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.lblFecha = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.MenuVertical = new System.Windows.Forms.Panel();
@@ -40,8 +43,6 @@ namespace appE3_SGDE.Vistaa
             this.btnCostos = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnpedidos = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btnLlamada = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnSocios = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -52,15 +53,16 @@ namespace appE3_SGDE.Vistaa
             this.btnEmpresa = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape8 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape7 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape6 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PanelContenedor = new System.Windows.Forms.Panel();
+            this.FechaHora = new System.Windows.Forms.Timer(this.components);
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -72,7 +74,9 @@ namespace appE3_SGDE.Vistaa
             // BarraTitulo
             // 
             this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.BarraTitulo.Controls.Add(this.lblFecha);
             this.BarraTitulo.Controls.Add(this.label1);
+            this.BarraTitulo.Controls.Add(this.lblHora);
             this.BarraTitulo.Controls.Add(this.btnMinimizar);
             this.BarraTitulo.Controls.Add(this.btnCerrar);
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -80,6 +84,17 @@ namespace appE3_SGDE.Vistaa
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(1366, 35);
             this.BarraTitulo.TabIndex = 0;
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 18F);
+            this.lblFecha.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblFecha.Location = new System.Drawing.Point(588, 2);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(112, 30);
+            this.lblFecha.TabIndex = 4;
+            this.lblFecha.Text = "lblfecha";
             // 
             // label1
             // 
@@ -91,6 +106,17 @@ namespace appE3_SGDE.Vistaa
             this.label1.Size = new System.Drawing.Size(191, 22);
             this.label1.TabIndex = 3;
             this.label1.Text = "SGDE-ADSI 2142457";
+            // 
+            // lblHora
+            // 
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("Century Gothic", 18F);
+            this.lblHora.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblHora.Location = new System.Drawing.Point(721, 2);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(96, 30);
+            this.lblHora.TabIndex = 5;
+            this.lblHora.Text = "lblHora";
             // 
             // btnMinimizar
             // 
@@ -124,8 +150,6 @@ namespace appE3_SGDE.Vistaa
             this.MenuVertical.Controls.Add(this.btnCostos);
             this.MenuVertical.Controls.Add(this.panel6);
             this.MenuVertical.Controls.Add(this.btnpedidos);
-            this.MenuVertical.Controls.Add(this.panel5);
-            this.MenuVertical.Controls.Add(this.btnLlamada);
             this.MenuVertical.Controls.Add(this.panel4);
             this.MenuVertical.Controls.Add(this.btnSocios);
             this.MenuVertical.Controls.Add(this.panel3);
@@ -157,7 +181,7 @@ namespace appE3_SGDE.Vistaa
             // 
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.panel7.Location = new System.Drawing.Point(0, 549);
+            this.panel7.Location = new System.Drawing.Point(0, 542);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(5, 32);
             this.panel7.TabIndex = 15;
@@ -173,18 +197,19 @@ namespace appE3_SGDE.Vistaa
             this.btnCostos.ForeColor = System.Drawing.Color.White;
             this.btnCostos.Image = ((System.Drawing.Image)(resources.GetObject("btnCostos.Image")));
             this.btnCostos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCostos.Location = new System.Drawing.Point(3, 549);
+            this.btnCostos.Location = new System.Drawing.Point(3, 542);
             this.btnCostos.Name = "btnCostos";
             this.btnCostos.Size = new System.Drawing.Size(217, 32);
             this.btnCostos.TabIndex = 14;
             this.btnCostos.Text = "Costos";
             this.btnCostos.UseVisualStyleBackColor = true;
+            this.btnCostos.Click += new System.EventHandler(this.btnCostos_Click);
             // 
             // panel6
             // 
             this.panel6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.panel6.Location = new System.Drawing.Point(0, 485);
+            this.panel6.Location = new System.Drawing.Point(0, 475);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(5, 32);
             this.panel6.TabIndex = 13;
@@ -200,45 +225,19 @@ namespace appE3_SGDE.Vistaa
             this.btnpedidos.ForeColor = System.Drawing.Color.White;
             this.btnpedidos.Image = ((System.Drawing.Image)(resources.GetObject("btnpedidos.Image")));
             this.btnpedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnpedidos.Location = new System.Drawing.Point(3, 485);
+            this.btnpedidos.Location = new System.Drawing.Point(3, 475);
             this.btnpedidos.Name = "btnpedidos";
             this.btnpedidos.Size = new System.Drawing.Size(217, 32);
             this.btnpedidos.TabIndex = 12;
             this.btnpedidos.Text = "Pedidos";
             this.btnpedidos.UseVisualStyleBackColor = true;
-            // 
-            // panel5
-            // 
-            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.panel5.Location = new System.Drawing.Point(0, 421);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(5, 32);
-            this.panel5.TabIndex = 11;
-            // 
-            // btnLlamada
-            // 
-            this.btnLlamada.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnLlamada.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLlamada.FlatAppearance.BorderSize = 0;
-            this.btnLlamada.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnLlamada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLlamada.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLlamada.ForeColor = System.Drawing.Color.White;
-            this.btnLlamada.Image = ((System.Drawing.Image)(resources.GetObject("btnLlamada.Image")));
-            this.btnLlamada.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLlamada.Location = new System.Drawing.Point(3, 421);
-            this.btnLlamada.Name = "btnLlamada";
-            this.btnLlamada.Size = new System.Drawing.Size(217, 32);
-            this.btnLlamada.TabIndex = 10;
-            this.btnLlamada.Text = "Llamadas";
-            this.btnLlamada.UseVisualStyleBackColor = true;
+            this.btnpedidos.Click += new System.EventHandler(this.btnpedidos_Click);
             // 
             // panel4
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.panel4.Location = new System.Drawing.Point(0, 357);
+            this.panel4.Location = new System.Drawing.Point(0, 404);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(5, 32);
             this.panel4.TabIndex = 9;
@@ -254,7 +253,7 @@ namespace appE3_SGDE.Vistaa
             this.btnSocios.ForeColor = System.Drawing.Color.White;
             this.btnSocios.Image = ((System.Drawing.Image)(resources.GetObject("btnSocios.Image")));
             this.btnSocios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSocios.Location = new System.Drawing.Point(3, 357);
+            this.btnSocios.Location = new System.Drawing.Point(3, 400);
             this.btnSocios.Name = "btnSocios";
             this.btnSocios.Size = new System.Drawing.Size(217, 32);
             this.btnSocios.TabIndex = 8;
@@ -265,7 +264,7 @@ namespace appE3_SGDE.Vistaa
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.panel3.Location = new System.Drawing.Point(0, 293);
+            this.panel3.Location = new System.Drawing.Point(0, 324);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(5, 32);
             this.panel3.TabIndex = 7;
@@ -281,18 +280,19 @@ namespace appE3_SGDE.Vistaa
             this.btnProducto.ForeColor = System.Drawing.Color.White;
             this.btnProducto.Image = ((System.Drawing.Image)(resources.GetObject("btnProducto.Image")));
             this.btnProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProducto.Location = new System.Drawing.Point(3, 293);
+            this.btnProducto.Location = new System.Drawing.Point(3, 324);
             this.btnProducto.Name = "btnProducto";
             this.btnProducto.Size = new System.Drawing.Size(217, 32);
             this.btnProducto.TabIndex = 6;
             this.btnProducto.Text = "Producto";
             this.btnProducto.UseVisualStyleBackColor = true;
+            this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
             // 
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.panel2.Location = new System.Drawing.Point(0, 229);
+            this.panel2.Location = new System.Drawing.Point(0, 246);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(5, 32);
             this.panel2.TabIndex = 5;
@@ -308,7 +308,7 @@ namespace appE3_SGDE.Vistaa
             this.btnCliente.ForeColor = System.Drawing.Color.White;
             this.btnCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnCliente.Image")));
             this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCliente.Location = new System.Drawing.Point(3, 229);
+            this.btnCliente.Location = new System.Drawing.Point(3, 246);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(217, 32);
             this.btnCliente.TabIndex = 4;
@@ -361,17 +361,27 @@ namespace appE3_SGDE.Vistaa
             this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape4,
             this.lineShape8,
             this.lineShape7,
             this.lineShape6,
             this.lineShape5,
-            this.lineShape4,
             this.lineShape3,
             this.lineShape2,
             this.lineShape1});
             this.shapeContainer1.Size = new System.Drawing.Size(220, 733);
             this.shapeContainer1.TabIndex = 1;
             this.shapeContainer1.TabStop = false;
+            // 
+            // lineShape4
+            // 
+            this.lineShape4.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape4.Enabled = false;
+            this.lineShape4.Name = "lineShape4";
+            this.lineShape4.X1 = 19;
+            this.lineShape4.X2 = 202;
+            this.lineShape4.Y1 = 453;
+            this.lineShape4.Y2 = 453;
             // 
             // lineShape8
             // 
@@ -380,8 +390,8 @@ namespace appE3_SGDE.Vistaa
             this.lineShape8.Name = "lineShape8";
             this.lineShape8.X1 = 18;
             this.lineShape8.X2 = 198;
-            this.lineShape8.Y1 = 214;
-            this.lineShape8.Y2 = 214;
+            this.lineShape8.Y1 = 219;
+            this.lineShape8.Y2 = 219;
             // 
             // lineShape7
             // 
@@ -398,40 +408,30 @@ namespace appE3_SGDE.Vistaa
             this.lineShape6.BorderColor = System.Drawing.Color.DimGray;
             this.lineShape6.Enabled = false;
             this.lineShape6.Name = "lineShape6";
-            this.lineShape6.X1 = 19;
-            this.lineShape6.X2 = 198;
-            this.lineShape6.Y1 = 343;
-            this.lineShape6.Y2 = 343;
+            this.lineShape6.X1 = 17;
+            this.lineShape6.X2 = 196;
+            this.lineShape6.Y1 = 300;
+            this.lineShape6.Y2 = 300;
             // 
             // lineShape5
             // 
             this.lineShape5.BorderColor = System.Drawing.Color.DimGray;
             this.lineShape5.Enabled = false;
             this.lineShape5.Name = "lineShape5";
-            this.lineShape5.X1 = 19;
-            this.lineShape5.X2 = 197;
-            this.lineShape5.Y1 = 405;
-            this.lineShape5.Y2 = 405;
-            // 
-            // lineShape4
-            // 
-            this.lineShape4.BorderColor = System.Drawing.Color.DimGray;
-            this.lineShape4.Enabled = false;
-            this.lineShape4.Name = "lineShape4";
-            this.lineShape4.X1 = 19;
-            this.lineShape4.X2 = 198;
-            this.lineShape4.Y1 = 467;
-            this.lineShape4.Y2 = 467;
+            this.lineShape5.X1 = 18;
+            this.lineShape5.X2 = 196;
+            this.lineShape5.Y1 = 382;
+            this.lineShape5.Y2 = 382;
             // 
             // lineShape3
             // 
             this.lineShape3.BorderColor = System.Drawing.Color.DimGray;
             this.lineShape3.Enabled = false;
             this.lineShape3.Name = "lineShape3";
-            this.lineShape3.X1 = 17;
-            this.lineShape3.X2 = 200;
-            this.lineShape3.Y1 = 533;
-            this.lineShape3.Y2 = 533;
+            this.lineShape3.X1 = 18;
+            this.lineShape3.X2 = 201;
+            this.lineShape3.Y1 = 528;
+            this.lineShape3.Y2 = 528;
             // 
             // lineShape2
             // 
@@ -462,6 +462,11 @@ namespace appE3_SGDE.Vistaa
             this.PanelContenedor.Name = "PanelContenedor";
             this.PanelContenedor.Size = new System.Drawing.Size(1146, 733);
             this.PanelContenedor.TabIndex = 2;
+            // 
+            // FechaHora
+            // 
+            this.FechaHora.Enabled = true;
+            this.FechaHora.Tick += new System.EventHandler(this.FechaHora_Tick);
             // 
             // frmMenu
             // 
@@ -494,7 +499,6 @@ namespace appE3_SGDE.Vistaa
         private System.Windows.Forms.Panel MenuVertical;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnCerrar;
-        private System.Windows.Forms.Panel PanelContenedor;
         private System.Windows.Forms.PictureBox btnHome;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
@@ -502,8 +506,6 @@ namespace appE3_SGDE.Vistaa
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnpedidos;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btnLlamada;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnSocios;
         private System.Windows.Forms.Panel panel3;
@@ -518,8 +520,12 @@ namespace appE3_SGDE.Vistaa
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape7;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape6;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape5;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape4;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Panel PanelContenedor;
+        private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Timer FechaHora;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape4;
     }
 }

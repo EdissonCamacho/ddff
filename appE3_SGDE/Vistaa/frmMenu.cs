@@ -41,7 +41,7 @@ namespace appE3_SGDE.Vistaa
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void mtdAbrirFormHijo(object formhijo)
+        public void mtdAbrirFormHijo(object formhijo)
         {
             if (this.PanelContenedor.Controls.Count>0)
                 this.PanelContenedor.Controls.RemoveAt(0);
@@ -67,6 +67,28 @@ namespace appE3_SGDE.Vistaa
         private void btnHome_Click(object sender, EventArgs e)
         {
             mtdAbrirFormHijo(new frmBienvenida());
+        }
+
+        private void btnProducto_Click(object sender, EventArgs e)
+        {
+            mtdAbrirFormHijo(new frmProducto());
+        }
+
+        private void FechaHora_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString("h:mm:ss");
+            lblFecha.Text = DateTime.Now.ToShortDateString();
+
+        }
+
+        private void btnCostos_Click(object sender, EventArgs e)
+        {
+            mtdAbrirFormHijo(new frmTarifa());
+        }
+
+        private void btnpedidos_Click(object sender, EventArgs e)
+        {
+            mtdAbrirFormHijo(new frmPedidos());
         }
     }
 }

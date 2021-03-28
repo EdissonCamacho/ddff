@@ -56,11 +56,19 @@ namespace appE3_SGDE.Datoss
         }
         public int mtdEliminar()
         {
+            string consulta = "delete from cliente where idCliente = " + idCliente;
             clConexion objConexion = new clConexion();
-            string consulta = "delete from cliente where nombre='" + nombre + "'and apellido='" + apellido + "'and direccion='" + direccion + "'and telefono='" + telefono + "'and email='" + email + "'and nombreEmpresa='" + nombreEmpresa + "'";
             int eliminar = objConexion.mtdConectado(consulta);
             return eliminar;
         }
+        public DataTable mtdBuscar()
+        {
+            string consulta = "select * from cliente where telefono='" + telefono + "'";
+            clConexion objConexion = new clConexion();
+            DataTable tblDatos = new DataTable();
+            tblDatos = objConexion.mtdDesconectado(consulta);
+            return tblDatos;
         }
     }
+}
 
